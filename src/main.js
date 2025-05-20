@@ -5,6 +5,7 @@ dotenv.config()
 const BASE_URL = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}`
 
 const freeBot = []
+const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.start((ctx) => ctx.reply("Welcome"))
 
 bot.help((ctx) => {
